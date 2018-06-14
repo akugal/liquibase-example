@@ -1,0 +1,7 @@
+This directory used for development needs
+
+First setup dev.properties like shown in dev.properties.template
+
+Ant
+===
+See build.xml file to manage (drop/create) database schema

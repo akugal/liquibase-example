@@ -1,0 +1,14 @@
+#IDE files
+.project
+.classpath
+.settings
+.idea
+*.iml
+
+#Build data
+target/
+
+# Single files
+/src/main/resources/lib/*
+/src/main/resources/config/database.properties
+/src/main/resources/config/dev/dev.properties

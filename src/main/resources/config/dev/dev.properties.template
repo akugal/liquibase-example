@@ -1,0 +1,8 @@
+## Specify database url, schema name, username and password if necessary
+
+db.driverClassName=com.mysql.jdbc.Driver
+db.schema.main=mysql
+db.schema=myschema
+db.url=jdbc:mysql://localhost:3306
+db.username=root
+db.password=admin

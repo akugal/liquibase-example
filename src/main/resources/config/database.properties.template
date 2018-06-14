@@ -1,0 +1,14 @@
+#Copy to database.properties and specify url (containing schema), username and password for target database
+#Example of url: jdbc:mysql://localhost:3306/myschema
+
+# driver class
+driver=oracle.jdbc.OracleDriver
+
+# path to driver jar
+classpath=../lib/ojdbc6.jar
+
+# full url
+url=jdbc:oracle://<ip/localhost>:<port>/<db-schema>
+
+username=<db-username>
+password=<db-password>

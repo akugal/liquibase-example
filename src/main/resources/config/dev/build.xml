@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="EOBR cc_logistics">
+
+    <path id="classpath">
+        <fileset dir="../../lib">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <property file="dev.properties"/>
+
+    <target name="schema.drop">
+        <echo>Drop schema ${db.schema}</echo>
+
+        <sql driver="${db.driverClassName}"
+             url="${db.url}/${db.schema.main}"
+             userid="${db.username}"
+             password="${db.password}">
+
+            <classpath refid="classpath"/>
+
+            <transaction>
+                DROP SCHEMA IF EXISTS ${db.schema};
+            </transaction>
+        </sql>
+    </target>
+
+    <target name="schema.create">
+        <echo>Create schema ${db.schema}</echo>
+
+        <sql driver="${db.driverClassName}"
+             url="${db.url}/${db.schema.main}"
+             userid="${db.username}"
+             password="${db.password}">
+
+            <classpath refid="classpath"/>
+
+            <transaction>
+                CREATE SCHEMA ${db.schema};
+            </transaction>
+        </sql>
+    </target>
+</project>
